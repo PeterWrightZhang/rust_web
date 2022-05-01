@@ -1,0 +1,21 @@
+[package]
+name = "db"
+authors = ["Zepeng Zhang <peterwrighten@gmail.com>"]
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+actix-rt = "*"
+actix-web = "*"
+chrono = { version = "*", features = ["serde"] }
+dotenv = "*"
+openssl = { version = "*", features = ["vendored"] }
+serde = { version = "*", features = ["derive"] }
+sqlx = { version = "*", features = [
+    "postgres",
+    "runtime-tokio-rustls",
+    "macros",
+    "chrono",
+] }
