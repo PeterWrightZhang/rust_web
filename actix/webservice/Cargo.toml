@@ -12,6 +12,16 @@ actix-web = "*"
 actix-rt = "*"
 serde = { version = "*", features = ["derive"] }
 chrono = { version = "*", features = ["serde"]}
+dotenv = "*"
+openssl = { version = "*", features = ["vendored"] }
+sqlx = { version = "*", default_features = false, features = [
+    "postgres",
+    "runtime-tokio-rustls",
+    "macros",
+    "chrono",
+]}
+
+
 
 [[bin]]
 name = "server1"
